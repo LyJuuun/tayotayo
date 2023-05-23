@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bottom_home"
+        android:icon="@drawable/home13"
+        android:title="홈" />
+
+    <item
+        android:id="@+id/bottom_board"
+        android:title="안내도우미"
+        android:enabled="true"
+        android:icon="@drawable/helper"/>
+
+    <item
+        android:id="@+id/bottom_minon"
+        android:title="민원신고"
+        android:enabled="true"
+        android:icon="@drawable/siren"
+        />
+
+    <item
+        android:id="@+id/bottom_setting"
+        android:title="설정"
+        android:enabled="true"
+        android:icon="@drawable/setting1"
+        />
+
+    <!-- android:icon="@drawable/" 이미지 넣을거면 하셈-->
+</menu>
