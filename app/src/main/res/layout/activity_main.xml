@@ -31,7 +31,7 @@
     <com.naver.maps.map.MapView
         android:id="@+id/map"
         android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         tools:background="#333333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,7 @@
 
     <Button
         android:id="@+id/btn1"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="80dp"
         android:text="경로검색"
         app:layout_constraintTop_toBottomOf="@id/map"
@@ -50,7 +50,7 @@
 
     <Button
         android:id="@+id/btn2"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="80dp"
         android:text="편의시설"
         app:layout_constraintTop_toBottomOf="@id/map"
@@ -60,7 +60,7 @@
 
     <Button
         android:id="@+id/btn3"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="80dp"
         android:text="안내도우미"
         android:layout_marginTop="10dp"
@@ -70,7 +70,7 @@
 
     <Button
         android:id="@+id/btn4"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="80dp"
         android:layout_marginTop="10dp"
         android:text="커뮤니티"
@@ -80,7 +80,7 @@
 
     <Button
         android:id="@+id/btn5"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="80dp"
         android:layout_marginTop="10dp"
         android:text="민원신고"
