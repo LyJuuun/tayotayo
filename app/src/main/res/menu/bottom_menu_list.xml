@@ -25,6 +25,5 @@
         android:enabled="true"
         android:icon="@drawable/setting1"
         />
-
     <!-- android:icon="@drawable/" 이미지 넣을거면 하셈-->
 </menu>
