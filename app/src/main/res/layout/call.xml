@@ -14,6 +14,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="전화걸기"
-        />
+        android:drawableLeft="@drawable/call"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
