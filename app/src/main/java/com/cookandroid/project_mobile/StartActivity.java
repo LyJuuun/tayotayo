@@ -11,6 +11,7 @@ import android.widget.ImageView;
 public class StartActivity extends AppCompatActivity {
     ImageView startBtn;
     // hi
+    //hed
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
