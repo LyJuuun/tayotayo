@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="에스컬레이터"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:drawableRight="@drawable/search"
+        android:layout_marginTop="20dp"/>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        android:layout_marginTop="30dp"/>
+    <ImageView
+        android:id="@+id/station1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/station"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="명학역"
+        app:layout_constraintStart_toEndOf="@id/station1"
+        app:layout_constraintTop_toTopOf="@id/station1"
+        app:layout_constraintBottom_toBottomOf="@id/station1"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"/>
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/icon"
+        app:layout_constraintStart_toStartOf="@id/icon"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:text="아쉽게도"/>
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="'명학역'"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#0000ff"
+        app:layout_constraintStart_toEndOf="@id/text1"
+        app:layout_constraintTop_toTopOf="@id/text1"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="에는"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/text2"
+        app:layout_constraintTop_toTopOf="@id/text1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text1"
+        app:layout_constraintStart_toStartOf="@id/text1"
+        app:layout_constraintEnd_toEndOf="@id/text3"
+        android:text="에스컬레이터가 없어요."
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
