@@ -20,7 +20,6 @@ import androidx.core.content.ContextCompat;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HelperActivity extends AppCompatActivity implements View.OnClickListener {
-    BottomNavigationView bottomNavigationView;
     Button btn;
     String telNum = "031-1234-5678";
 
