@@ -2,7 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"
+        tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
@@ -32,6 +38,9 @@
             android:exported="true"/>
         <activity android:name=".CallActivity"/>
         <activity android:name=".HelperActivity"/>
+        <activity android:name=".community.CommunityActivity" />
+        <activity android:name=".community.CreateCommunityActivity"/>
+        <activity android:name=".community.CommunityDetailActivity"/>
     </application>
 
 </manifest>

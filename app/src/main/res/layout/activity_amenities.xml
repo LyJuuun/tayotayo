@@ -21,6 +21,15 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
    <Button
        android:id="@+id/elevatorButton"
        android:layout_width="wrap_content"
