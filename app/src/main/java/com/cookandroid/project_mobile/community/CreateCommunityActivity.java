@@ -146,9 +146,9 @@ public class CreateCommunityActivity extends AppCompatActivity {
             return;
         }
 
-        if (requestCode == 2020) {
+        if (requestCode == 2020) {//갤러리 들어갔을 때
             Uri uri = data.getData();
-            if (uri != null) {
+            if (uri != null) { //uri가 정상이면
                 ImageView imageView = findViewById(R.id.photoImageView);
                 imageView.setImageURI(uri);
                 selectedUri = uri;

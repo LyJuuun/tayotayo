@@ -3,11 +3,14 @@ package com.cookandroid.project_mobile.community;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -67,9 +70,18 @@ public class CommunityActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_community);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar); //액티비티의 앱바(App Bar)로 지정
+        ActionBar actionBar = getSupportActionBar(); //앱바 제어를 위해 툴바 액세스
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        getSupportActionBar().setTitle("설정하셈"); // 툴바 제목 설정
+        if(actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true); // 앱바에 뒤로가기 버튼 만들기
+        }
+
         FirebaseApp.initializeApp(this);
 
-        communityList = new ArrayList<>();
+        communityList = new ArrayList<>(); //초기화
         communityDB = FirebaseDatabase.getInstance().getReference().child(DBKey.DB_COMMUNITY);
 
         communityAdapter = new CommunityAdapter(CommunityData -> {
@@ -93,6 +105,17 @@ public class CommunityActivity extends AppCompatActivity {
 
         communityDB.addChildEventListener(listener);
     }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        switch (item.getItemId()){
+            case android.R.id.home:
+                //Intent it = new Intent(getApplicationContext(), StartActivity.class);
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     @Override
     protected void onDestroy() {
@@ -107,3 +130,4 @@ public class CommunityActivity extends AppCompatActivity {
         communityAdapter.notifyDataSetChanged();
     }
 }
+

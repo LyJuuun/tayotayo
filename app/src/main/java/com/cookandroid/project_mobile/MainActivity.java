@@ -15,8 +15,7 @@ import com.cookandroid.project_mobile.community.CommunityActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-    BottomNavigationView bottomNavigationView;
-    Button btn, btn2, communityBtn;
+    Button btn, btn2, btn3, communityBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +33,13 @@ public class MainActivity extends AppCompatActivity {
         }
         btn = findViewById(R.id.routeSearch);
         btn2 = findViewById(R.id.helperBtn);
+        btn3 = findViewById(R.id.Facilities);
         communityBtn = findViewById(R.id.community);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, CallActivity.class);
+                Intent intent = new Intent(MainActivity.this, RouteActivity.class);
                 startActivity(intent);
             }
         });
@@ -47,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, HelperActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FacilitiesActivity.class);
                 startActivity(intent);
             }
         });
@@ -58,20 +65,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.bottom_home:
-                        Intent it = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(it);
-                        finish();
-                        break;
-                }
-                return true;
-            }
-        });
+
     }
     /** 주석
     /** Toolbar Item 선택시 기능 **/

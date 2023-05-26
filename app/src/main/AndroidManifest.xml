@@ -36,8 +36,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"/>
-        <activity android:name=".CallActivity"/>
+        <activity android:name=".RouteActivity"/>
         <activity android:name=".HelperActivity"/>
+        <activity android:name=".FacilitiesActivity"/>
         <activity android:name=".community.CommunityActivity" />
         <activity android:name=".community.CreateCommunityActivity"/>
         <activity android:name=".community.CommunityDetailActivity"/>
