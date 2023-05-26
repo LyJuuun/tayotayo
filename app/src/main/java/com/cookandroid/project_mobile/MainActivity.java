@@ -11,11 +11,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.cookandroid.project_mobile.community.CommunityActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    Button btn, btn2;
+    Button btn, btn2, communityBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         }
         btn = findViewById(R.id.routeSearch);
         btn2 = findViewById(R.id.helperBtn);
+        communityBtn = findViewById(R.id.community);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, HelperActivity.class);
+                startActivity(intent);
+            }
+        });
+        communityBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CommunityActivity.class);
                 startActivity(intent);
             }
         });
